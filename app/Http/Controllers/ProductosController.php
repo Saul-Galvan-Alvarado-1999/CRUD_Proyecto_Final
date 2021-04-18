@@ -103,7 +103,7 @@ class ProductosController extends Controller
         $datos_Producto = request()->except(['_token', '_method']);
         Productos::where('id', '=', $id)->update($datos_Producto);
 
-        return redirect('producto')->with('Mensaje', 'Producto modificado de manera éxitosa!!!');
+        return redirect('productos')->with('Mensaje', 'Producto modificado de manera éxitosa!!!');
     }
 
     /**
